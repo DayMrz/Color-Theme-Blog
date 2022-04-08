@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;700&display=swap');
+
+:root {
+  --background-app: hsl(234, 94%, 7%);
+  --grayish-blue1: hsl(233, 93%, 11%);
+  --grayish-blue-shadow: hsla(231, 68%, 4%, 0.7);
+  --letter-app-change: hsl(235, 20%, 88%);
+  --letter-app: hsl(235, 20%, 88%);
+  --neutral: hsl(0, 0%, 98%);
+  --icon-color: hsl(294, 64%, 29%);
+  
+  --background-img: url('./images/bg-mobile-dark.jpg');
+  --btn-icon: url('./images/icon-sun.svg');
+}
+
+.force {
+  --background-app: hsl(0, 0%, 98%);
+  --grayish-blue1: hsla(234, 39%, 85%, 0.592);
+  --grayish-blue-shadow: hsla(234, 39%, 85%, 0.162);
+  --neutral: hsl(0, 0%, 98%);
+  --letter-app-change: hsl(0, 0%, 0%);
+  --letter-app: hsl(234, 94%, 7%);
+  --icon-color: hsl(247, 54%, 48%); 
+
+  --background-img: url('./images/bg-mobile-light.jpg');
+  --btn-icon: url('./images/icon-moon.svg');
+}
+
+@media (prefers-color-scheme: light) {
+  
+  :root {
+    --background-app: hsl(0, 0%, 98%);
+    --grayish-blue1: hsla(234, 39%, 85%, 0.592);
+    --grayish-blue-shadow: hsla(234, 39%, 85%, 0.162);
+    --neutral: hsl(0, 0%, 98%);
+    --letter-app-change: hsl(0, 0%, 0%);
+    --letter-app: hsl(234, 94%, 7%);
+    --icon-color: hsl(247, 54%, 48%); 
+  
+    --background-img: url('./images/bg-mobile-light.jpg');
+    --btn-icon: url('./images/icon-moon.svg');
+  }
+
+  .force {
+    --background-app: hsl(234, 94%, 7%);
+    --grayish-blue1: hsl(233, 93%, 11%);
+    --grayish-blue-shadow: hsla(231, 68%, 4%, 0.7);
+    --letter-app-change: hsl(235, 20%, 88%);
+    --letter-app: hsl(235, 20%, 88%);
+    --neutral: hsl(0, 0%, 98%);
+    --icon-color: hsl(294, 64%, 29%);
+    
+    --background-img: url('./images/bg-mobile-dark.jpg');
+    --btn-icon: url('./images/icon-sun.svg');
+  }
+}
+
+body {
+  background-color: var(--background-app);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: .8em;
+  font-weight: 200;
+  line-height: 1.2;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.header {
+  background-image: var(--background-img);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 12em;
+}
+
+.header .wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 2em;
+}
+
+.title {
+  color: var(--neutral);
+  letter-spacing: .1em;
+  margin: 0;
+}
+
+#btnTheme {
+  background-color: transparent;
+  background-image: var(--btn-icon);
+  background-size: cover;
+  border: none;
+  color: var(--grayish-blue);
+  font-size: 2em;
+  height: 1em;
+  width: 1em;
+}
+
+.icons {
+  color: var(--icon-color);
+  font-size: 2.5em;
+}
+
+.icon-home {
+  font-size: 3.2em;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+} 
+
+.list {
+  padding: 0;
+  width: 80%;
+}
+
+.list li {
+  list-style: none;
+}
+
+.article {
+  background-color: var(--grayish-blue1);
+  border-radius: 10px;
+  box-shadow: var(--grayish-blue-shadow) 0 40px 40px -7px, var(--grayish-blue-shadow) 0 10px 10px -5px;
+  margin: 1.5em;
+  padding: 1.5em 1em;
+}
+
+.article .subtitle {
+  color: var(--letter-app-change);
+}
+
+.description {
+  color: var(--letter-app);
+  font-size: 1.4em;
+}
